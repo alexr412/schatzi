@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fbeaf2" />
+  <title>Birthday Date Roulette</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-label="Geburtstags-Date-Roulette">
+      <div class="ambient-glow glow-one"></div>
+      <div class="ambient-glow glow-two"></div>
+
+      <span class="sparkle sparkle-1" aria-hidden="true">✦</span>
+      <span class="sparkle sparkle-2" aria-hidden="true">★</span>
+      <span class="sparkle sparkle-3" aria-hidden="true">✧</span>
+      <span class="sparkle sparkle-4" aria-hidden="true">✦</span>
+      <span class="sparkle sparkle-5" aria-hidden="true">⋆</span>
+
+      <div class="still-stars" aria-hidden="true">
+        <span class="still-star still-star-1">✦</span>
+        <span class="still-star still-star-2">✧</span>
+        <span class="still-star still-star-3">★</span>
+        <span class="still-star still-star-4">✦</span>
+        <span class="still-star still-star-5">✧</span>
+        <span class="still-star still-star-6">✦</span>
+        <span class="still-star still-star-7">★</span>
+        <span class="still-star still-star-8">✧</span>
+        <span class="still-star still-star-9">✦</span>
+        <span class="still-star still-star-10">✧</span>
+        <span class="still-star still-star-11">✦</span>
+        <span class="still-star still-star-12">✧</span>
+        <span class="still-dot still-dot-1"></span>
+        <span class="still-dot still-dot-2"></span>
+        <span class="still-dot still-dot-3"></span>
+        <span class="still-dot still-dot-4"></span>
+      </div>
+
+      <div class="top-copy">
+        <p class="eyebrow">A little birthday surprise</p>
+        <h1>
+          <span class="headline-line">Happy Birthday,</span>
+          <span class="headline-line headline-accent">mein Süßi <span class="heart" aria-hidden="true">♥</span></span>
+        </h1>
+        <p class="intro">
+          Heute musst du nichts planen. Du entscheidest nur die Richtung –
+          den Rest übernimmt das Schicksal.
+        </p>
+      </div>
+
+      <section class="choice-section" aria-labelledby="choice-title">
+        <h2 id="choice-title" class="section-question">Worauf hast du heute Lust?</h2>
+
+        <div class="choice-grid" role="group" aria-label="Aktivitätsart auswählen">
+          <button type="button" class="choice-card" data-kind="indoor">
+            <span class="choice-icon" aria-hidden="true">☕</span>
+            <strong>Drinnen</strong>
+            <span class="choice-subtitle">gemütlich · lecker · verspielt</span>
+          </button>
+
+          <button type="button" class="choice-card" data-kind="outdoor">
+            <span class="choice-icon" aria-hidden="true">☀</span>
+            <strong>Draußen</strong>
+            <span class="choice-subtitle">frische Luft · Abenteuer · Aussicht</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="roulette-panel" id="roulette-panel" aria-live="polite">
+        <div class="roulette-heading">
+          <strong>Dein Geburtstags-Roulette</strong>
+          <span id="kind-label">Erst auswählen</span>
+        </div>
+
+        <div class="roulette-window">
+          <div class="selection-marker" aria-hidden="true"></div>
+          <div class="reel" id="reel" aria-hidden="true"></div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="primary-button" id="spin" disabled>
+            <span aria-hidden="true">✦</span>
+            Überraschung ziehen
+          </button>
+
+        </div>
+
+        <div class="result-card" id="result">
+          <div class="result-label">Das Schicksal hat entschieden</div>
+          <h3 id="result-name"></h3>
+          <p id="result-desc"></p>
+          <a class="result-link" id="result-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Aktivität ansehen ↗</a>
+          <div class="result-badge" id="result-badge">Bielefeld & Umgebung</div>
+        </div>
+      </section>
+
+      <details class="activity-directory" id="indoor-directory">
+        <summary>
+          <span>☕ Drinnen-Ideen für Donnerstag</span>
+          <small>18 Aktivitäten ansehen</small>
+        </summary>
+        <p class="directory-note">Alle 18 Aktivitäten sind im Roulette. Öffnungszeiten und freie Plätze für den 01.10. bitte vor der Fahrt noch einmal prüfen.</p>
+        <div class="activity-list" id="indoor-activities"></div>
+      </details>
+
+      <details class="activity-directory" id="outdoor-directory">
+        <summary>
+          <span>☀ Draußen-Ideen für Donnerstag</span>
+          <small>8 Aktivitäten ansehen</small>
+        </summary>
+        <p class="directory-note">Alle 8 Aktivitäten sind im Draußen-Roulette. Öffnungszeiten, Wetter und freie Plätze für den 01.10. bitte vor der Fahrt noch einmal prüfen.</p>
+        <div class="activity-list" id="outdoor-activities"></div>
+      </details>
+
+      <p class="footer-note">
+        Nur eine Regel: Was gezogen wird, wird gemacht. Vielleicht. ♡
+      </p>
+    </section>
+  </main>
+
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="shooting-star star-fall-a"><span>✦</span></span>
+    <span class="shooting-star star-across-a"><span>✧</span></span>
+    <span class="shooting-star star-fall-b"><span>✦</span></span>
+    <span class="shooting-star star-across-b"><span>✦</span></span>
+    <span class="shooting-star star-fall-a star-variant"><span>✧</span></span>
+    <span class="shooting-star star-across-a star-variant"><span>✦</span></span>
+    <span class="shooting-star star-fall-b star-variant"><span>✧</span></span>
+    <span class="shooting-star star-across-b star-variant"><span>✧</span></span>
+  </div>
+
+  <div class="reveal-layer" id="reveal-layer" role="dialog" aria-modal="true" aria-labelledby="reveal-name" hidden aria-hidden="true">
+    <div class="reveal-backdrop"></div>
+    <div class="reveal-card" id="reveal-card">
+      <div class="reveal-card-inner">
+        <div class="reveal-card-back"><span>?</span></div>
+        <div class="reveal-card-front">
+          <span class="reveal-icon" id="reveal-icon"></span>
+          <strong id="reveal-name"></strong>
+          <span class="reveal-description" id="reveal-description"></span>
+          <a class="reveal-link" id="reveal-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Aktivität ansehen ↗</a>
+          <button type="button" class="reveal-close" id="reveal-close">Zurück zur Seite</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
